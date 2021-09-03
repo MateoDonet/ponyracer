@@ -1,0 +1,9 @@
+<button class="btn btn-primary" type="button" (click)="color()">black | red</button>
+<hr>
+<div *ngFor="let race of races; 
+  odd as isOdd;" 
+    [style.background-color]="isOdd ? 'lightgray' : '#ffffff'">
+  <!-- [raceModel]="race" is the affectation of the raceModel from the component -->
+  <!-- displayOpt is a variable from the TypeScript file -->
+  <pr-race [raceModel]="race" [style.color]="displayOpt"></pr-race>
+</div>
